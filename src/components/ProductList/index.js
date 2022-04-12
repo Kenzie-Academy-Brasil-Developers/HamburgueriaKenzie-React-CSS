@@ -3,8 +3,8 @@ import Product from "../Product";
 
 function ProductList({ products, handleClick }) {
   return (
-    <div>
-      <ul>
+    <div className="ProductList">
+      <ul className="ProductList__ul">
         {products.map((product) => (
           <Product
             key={product.id}

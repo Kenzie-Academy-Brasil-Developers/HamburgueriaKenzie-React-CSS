@@ -67,25 +67,25 @@ function App() {
             onChange={showProducts}
           ></input>
         </header>
-        {currentSale.length > 0 ? (
+        <div className="App-mainContent">
+          {filteredProducts.length > 0 ? (
+            <>
+              <div className="App-Div-Results">
+                <h2 className="App-H2-ResultsFor">
+                  Resultados para&#58;{" "}
+                  <span className="App-Span-Results">{getInputValue}</span>
+                </h2>
+              </div>
+              <ProductList
+                products={filteredProducts}
+                handleClick={handleClick}
+              />
+            </>
+          ) : (
+            <ProductList products={products} handleClick={handleClick} />
+          )}
           <Cart currentSale={currentSale} setCurrentSale={setCurrentSale} />
-        ) : (
-          <div>
-            <h2>Sua sacola está vazia</h2>
-            <h3>Adicione itens</h3>
-          </div>
-        )}
-        {filteredProducts.length > 0 ? (
-          <>
-            <h2>Resultados para&#58; {getInputValue}</h2>
-            <ProductList
-              products={filteredProducts}
-              handleClick={handleClick}
-            />
-          </>
-        ) : (
-          <ProductList products={products} handleClick={handleClick} />
-        )}
+        </div>
       </div>
     </div>
   );

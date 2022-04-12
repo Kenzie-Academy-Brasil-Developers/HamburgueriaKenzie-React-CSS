@@ -1,22 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 .App {
   text-align: center;
 }
 
-.inputHeader {
-  width: 300px;
+.App-header {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100vw;
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  width: 100vw;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 140px;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  margin: 0px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+.inputHeader {
+  width: 85vw;
+  height: 56px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 0px;
+  border: 2px solid #e0e0e0;
+  padding-left: 15px;
+}
+
+.inputHeader::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #e0e0e0;
+  margin-left: 15px;
+  font-style: normal;
+}
+
+.App-mainContent {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.App-Div-Results {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-H2-ResultsFor {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 34px;
+  color: #333333;
+}
+
+.App-Span-Results {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 34px;
+  color: #828282;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+@media (min-width: 480px) {
+  header {
+    flex-direction: column;
+  }
+
+  .inputHeader {
+    width: 365px;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    height: 80px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .App-mainContent {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+  }
 }

@@ -2,19 +2,28 @@ import "./styles.css";
 
 function Product({ product, handleClick }) {
   return (
-    <li>
-      <div>
-        <img src={product.img} alt="Imagem do produto"></img>
+    <li className="liProduct">
+      <div className="liProduct__DivImg">
+        <img
+          className="liProduct__Img"
+          src={product.img}
+          alt="Imagem do produto"
+        ></img>
       </div>
-      <h2>{product.name}</h2>
-      <h3>{product.category}</h3>
-      <h4>
+      <h2 className="liProduct__ProductName">{product.name}</h2>
+      <h3 className="liProduct__ProductCategory">{product.category}</h3>
+      <h4 className="liProduct__ProductPrice">
         {product.price.toLocaleString("pt-BR", {
           style: "currency",
           currency: "BRL",
         })}
       </h4>
-      <button onClick={() => handleClick(product.id)}>Adicionar</button>
+      <button
+        className="liProduct__Button"
+        onClick={() => handleClick(product.id)}
+      >
+        Adicionar
+      </button>
     </li>
   );
 }
